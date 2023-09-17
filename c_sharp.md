@@ -48,3 +48,5 @@ WriteLine(string);
 string Read();
 
 new Random().Next(min, max) - int random number from min to max-1
+
+$"{number} -> {square}" - налог f-string в python
