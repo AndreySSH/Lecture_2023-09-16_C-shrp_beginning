@@ -54,3 +54,6 @@ $"{number} -> {square}" - аналог f-string в python
 тернарный оператор {condition} ? {if true} : {if false}
 
 #define в C# не может объявлять константы
+
+int[] array = {1,12,53,24,52,6,47,18};
+array.Length;
