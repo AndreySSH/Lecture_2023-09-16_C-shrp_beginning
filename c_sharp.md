@@ -57,3 +57,4 @@ $"{number} -> {square}" - аналог f-string в python
 
 int[] array = {1,12,53,24,52,6,47,18};
 array.Length;
+int[] array = new int[10];
