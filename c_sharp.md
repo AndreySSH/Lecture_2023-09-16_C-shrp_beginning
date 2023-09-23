@@ -30,7 +30,7 @@ autosave
 ## .net
  
 * dotnet new console - создать в текущем каталоге новый пустой проект консольного приложения
-* dtnet run - компиляция и запуск
+* dotnet run - компиляция и запуск
 
 ## Шаблон кнсольной программы
 
@@ -49,4 +49,8 @@ string Read();
 
 new Random().Next(min, max) - int random number from min to max-1
 
-$"{number} -> {square}" - налог f-string в python
+$"{number} -> {square}" - аналог f-string в python
+
+тернарный оператор {condition} ? {if true} : {if false}
+
+#define в C# не может объявлять константы
