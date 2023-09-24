@@ -56,5 +56,17 @@ $"{number} -> {square}" - аналог f-string в python
 #define в C# не может объявлять константы
 
 int[] array = {1,12,53,24,52,6,47,18};
-array.Length;
+array.Length - отдает длинну массива
 int[] array = new int[10];
+new int[]{x,y,z} - отдает массив составленный из переменных x,y,z
+
+
+Math.Round(d,2);
+Math.Pow(d,2);
+
+Math.Round(lenght,2);
+Math.Round(lenght,2,MidpointRounding.ToZero);
+
+using System.Globalization; //добавить глобально
+CultureInfo.CurrentCulture = new CultureInfo("en-US");  //добавить в метод Main
+//для вывода в т.ч. точки вместо запятой в разделителе дробных чисел.
