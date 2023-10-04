@@ -42,30 +42,68 @@ class Program{
 
 ## Описание методов классов
 
-класс Console:
+# Console::
 Write(string);
 WriteLine(string);
 string Read();
 
-new Random().Next(min, max) - int random number from min to max-1
+# Math::
+
+Pow(d,2);
+Round(d, 2);
+Round(d, 2, MidpointRounding.ToZero);
+
+# Random::
+
+Random rnd = new Random();
+rnd.Next(min, max) - int random number from min to max - 1 -> [min, max)
+rnd.NextDouble() * (max - min) + min - float random number from min to max -> [min, max]
+
+# Convert::
+
+int ToInt32(string);
+
+# int::
+
+int int.Parse(string);
+
+
+## Языковые структуры
 
 $"{number} -> {square}" - аналог f-string в python
+$"{(double):F2}" float с 2мя знаками после запятой
 
 тернарный оператор {condition} ? {if true} : {if false}
 
-#define в C# не может объявлять константы
+//#define в C# не умеет объявлять константы
 
-int[] array = {1,12,53,24,52,6,47,18};
+int[] array = new int[8];
+int[] array1 = {1, 2, 3, 4, 5, 6, 7, 8};
+int[] array2 = new int[8]{1, 2, 3, 4, 5, 6, 7, 8};
+int[] array3 = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+
+var array4 = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+
+var ttt = 6/4;
+
 array.Length - отдает длинну массива
 int[] array = new int[10];
 new int[]{x,y,z} - отдает массив составленный из переменных x,y,z
 
+void Method2(string msg)
+{
+    Console.WriteLine(msg);
+}
 
-Math.Round(d,2);
-Math.Pow(d,2);
+Method2(msg: "Test2"); - указание имени аргумента при вызове метода
 
-Math.Round(lenght,2);
-Math.Round(lenght,2,MidpointRounding.ToZero);
+int sum;
+checked
+{
+    sum += i;
+} - кидает исключение, если происходит в том числе переполнение int
+
+## Полезности
 
 using System.Globalization; //добавить глобально
 CultureInfo.CurrentCulture = new CultureInfo("en-US");  //добавить в метод Main
