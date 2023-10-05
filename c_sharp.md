@@ -70,12 +70,19 @@ int int.Parse(string);
 
 ## Языковые структуры
 
-$"{number} -> {square}" - аналог f-string в python
-$"{(double):F2}" float с 2мя знаками после запятой
+# Строки
 
-тернарный оператор {condition} ? {if true} : {if false}
+1. $"{number} -> {square}" - интераолированные строки (аналог f-string в python)
+2. $"{(double):F2}" float с 2мя знаками после запятой
+3. Строковые литералы verbatim @"C:\Test\Test1\"; - не интерпретирует  '\' как начало спецсимвола
+
+
+# Тернарный оператор
+{condition} ? {if true} : {if false}
 
 //#define в C# не умеет объявлять константы
+
+# Массивы
 
 int[] array = new int[8];
 int[] array1 = {1, 2, 3, 4, 5, 6, 7, 8};
@@ -89,6 +96,10 @@ var ttt = 6/4;
 array.Length - отдает длинну массива
 int[] array = new int[10];
 new int[]{x,y,z} - отдает массив составленный из переменных x,y,z
+
+# Многомерные массивы
+
+var[,] array = new string[2, 5];
 
 void Method2(string msg)
 {
