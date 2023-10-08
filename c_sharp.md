@@ -42,47 +42,47 @@ class Program{
 
 ## Описание методов классов
 
-# Console::
+### Console::
 Write(string);
 WriteLine(string);
 string Read();
 
-# Math::
+### Math::
 
 Pow(d,2);
 Round(d, 2);
 Round(d, 2, MidpointRounding.ToZero);
 
-# Random::
+### Random::
 
 Random rnd = new Random();
 rnd.Next(min, max) - int random number from min to max - 1 -> [min, max)
 rnd.NextDouble() * (max - min) + min - float random number from min to max -> [min, max]
 
-# Convert::
+### Convert::
 
 int ToInt32(string);
 
-# int::
+### int::
 
 int int.Parse(string);
 
 
 ## Языковые структуры
 
-# Строки
+#### Строки
 
 1. $"{number} -> {square}" - интераолированные строки (аналог f-string в python)
 2. $"{(double):F2}" float с 2мя знаками после запятой
 3. Строковые литералы verbatim @"C:\Test\Test1\"; - не интерпретирует  '\' как начало спецсимвола
 
 
-# Тернарный оператор
+### Тернарный оператор
 {condition} ? {if true} : {if false}
 
 //#define в C# не умеет объявлять константы
 
-# Массивы
+### Массивы
 
 int[] array = new int[8];
 int[] array1 = {1, 2, 3, 4, 5, 6, 7, 8};
@@ -97,7 +97,7 @@ array.Length - отдает длинну массива
 int[] array = new int[10];
 new int[]{x,y,z} - отдает массив составленный из переменных x,y,z
 
-# Многомерные массивы
+### Многомерные массивы
 
 var[,] array = new string[2, 5];
 
@@ -114,8 +114,54 @@ checked
     sum += i;
 } - кидает исключение, если происходит в том числе переполнение int
 
+### Однострочные методы
+
+bool IsEven(int value)
+{
+    return value % 2 == 0;
+}
+         |
+         V
+bool IsEven(int value) => value % 2 == 0;
+         |
+         V
+var IsEven = (int v) => v % 2 == 0;
+
+
 ## Полезности
 
 using System.Globalization; //добавить глобально
 CultureInfo.CurrentCulture = new CultureInfo("en-US");  //добавить в метод Main
 //для вывода в т.ч. точки вместо запятой в разделителе дробных чисел.
+
+(int a = 12;) var a = 12;
+Console.WriteLine(a.GetType()); -> System.Int32
+
+## Как клучшить свой код
+
+1. Имена переменных
+1. Имена методов
+1. Имена аргументов
+
+*Код чаще читают, чем пишут*
+
+*Не использовать хитрые сокращения кроме общепринятых*
+
+*Не использовать запрещенные слова*
+
+*Не надо сокращать, там где это не требуется. Ex:*
+1. GetWin vs GetWindow
+1. SendPM(int i, string t) vs SendPrivatMessage(int id, string text)
+1. ConvertToUnsignedChar vs ConvertToByte
+
+*Переносить длинные строки (ex: длина строки не превышает 100 символов)*
+
+*Автоформатирование в VS Code: Alt-Shift-F*
+
+b == false -> !b
+
+GetStreamAsync() - для асинхронных методов
+
+
+
+
