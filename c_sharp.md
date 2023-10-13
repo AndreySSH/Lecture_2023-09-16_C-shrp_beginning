@@ -27,6 +27,8 @@ _3 слоя:_
 
 autosave
 
+*tree /// summary add Format On Type on File->Preferences->Settings->Text Editor->Formatting*
+
 ## .net
  
 * dotnet new console - создать в текущем каталоге новый пустой проект консольного приложения
@@ -66,6 +68,29 @@ int ToInt32(string);
 ### int::
 
 int int.Parse(string);
+
+### System.Timers.Timer::
+
+using System;
+using System.Timers;
+System.Timers.Timer aTimer = new System.Timers.Timer(2000);
+aTimer.Elapsed += OnTimedEvent;
+aTimer.AutoReset = true;
+aTimer.Enabled = true;
+
+while(true);
+        
+aTimer.Stop();
+aTimer.Dispose();
+
+void OnTimedEvent(Object source, ElapsedEventArgs e){e.SignalTime;}
+
+### anyType::
+
+int a;
+a.GetType() -> System.Int32
+a.GetType().Name -> Int32
+
 
 
 ## Языковые структуры
@@ -127,8 +152,21 @@ bool IsEven(int value) => value % 2 == 0;
          V
 var IsEven = (int v) => v % 2 == 0;
 
+### Linq
+
+using System.Linq;
+.Where()
+.Select()
+.ToArray() ???
+
+### Цепочки вызовов методов
+
+
+
 
 ## Полезности
+
+### Точки вместо запятой в разделителе дробных чисел
 
 using System.Globalization; //добавить глобально
 CultureInfo.CurrentCulture = new CultureInfo("en-US");  //добавить в метод Main
@@ -162,6 +200,11 @@ b == false -> !b
 
 GetStreamAsync() - для асинхронных методов
 
+DRY - do not repeate youself 
+YAGNI - you are not gonna need it
+KISS - keep it simple, stupid
+
+три слеша - коментарий перед методом
 
 
 
